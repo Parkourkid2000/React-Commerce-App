@@ -17,12 +17,12 @@ const Nav = () => {
         </a>
         <ul className="nav__links">
           <li className="nav__list">
-            <a href="/null" className="nav__link">
+            <a href="/" className="nav__link">
               Home
             </a>
           </li>
           <li className="nav__list">
-            <a href="/null" className="nav__link">
+            <a href="/books" className="nav__link">
               Books
             </a>
           </li>

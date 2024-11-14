@@ -1,12 +1,30 @@
-import Nav from "./components/Nav"
+
+import Footer from "./components/Footer";
+import Nav from "./components/Nav";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Books from "./pages/Books";
+import {books} from './data.js'
+
 
 
 function App() {
   return (
-    <div className="App" >
+    <Router>
+      <div className="App">
         <Nav />
-    </div>
-  )
+<Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/books" element={<Books books={books} />} />
+  <Route />
+</Routes>
+
+        
+
+        <Footer />
+      </div>
+    </Router>
+  );
 }
 
 export default App;
