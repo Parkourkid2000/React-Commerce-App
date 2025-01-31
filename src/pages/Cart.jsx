@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import EmptyCart from '../assets/empty_cart.svg'
 
@@ -29,9 +28,9 @@ function Cart({ cart, changeQuantity, removeItem }) {
                 <span className="cart__price">Price</span>
               </div>
               <div className="cart__body">
-                {cart.map((book) => {
+                {cart.map((book, index) => {
                   return (
-                    <div className="cart__item">
+                    <div key={index} className="cart__item">
                       <div className="cart__book">
                         <img
                           src={book.url}
@@ -74,7 +73,7 @@ function Cart({ cart, changeQuantity, removeItem }) {
               </div>
               {!cart.length && <div className="cart__empty">
                 <img src={EmptyCart} alt="" className="cart__empty--img" />
-                <h2>You dont have any books in your cart!</h2>
+                <h2>You don't have any books in your cart!</h2>
 
                 <Link to="/books" ><button className="btn">Browse Books</button></Link>
               </div>}

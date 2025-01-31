@@ -6,7 +6,7 @@ import Books from "./pages/Books";
 import { books } from "./data.js";
 import BookInfo from "./pages/BookInfo.jsx";
 import Cart from "./pages/Cart.jsx";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -55,9 +55,7 @@ function App() {
   //   }
   // }
 
-  useEffect(() => {
-    console.log(cart);
-  }, [cart]);
+ 
 
   return (
     <Router>
